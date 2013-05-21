@@ -1,5 +1,5 @@
 # AnimateAt.js: A minimal animation timing API
-## Best served with Animate.css
+## Best served with [Animate.css](http://daneden.me/animate/)
 
 Simply add
 

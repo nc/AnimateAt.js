@@ -1,0 +1,71 @@
+@import "bourbon/bourbon";
+
+$max-width: 100%;
+@import "neat/neat";
+
+$tablet: new-breakpoint(max-width 900px);
+
+body {
+  color: #222;
+  text-align: left;
+  font-family: Helvetica;
+  @include outer-container;
+  @include pad;
+  font-size: 2rem;
+}
+
+html {
+  @include media($tablet) {
+    font-size: 87.5%;
+  }
+}
+
+h1, h2 {
+  @include span-columns(6);
+}
+
+.shuffle {
+  @include span-columns(12);
+  text-align: right;
+  font-size: 4rem;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); 
+  
+  color: red;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  @include span-columns(12);
+  margin-top: 2rem;
+
+  li {
+    display: inline-block;
+    @include span-columns(4);
+    text-align: center;
+    
+    @include media($tablet) {
+      @include span-columns(12);
+      margin: 1rem 0;
+    }
+    
+    span {
+      display: block;
+    }
+
+    .ss-icon {
+      font-size: 5rem;
+    }
+
+    background: rgba(0,0,0,0.05);
+    
+    &:hover {
+      background: #222;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    @include pad;
+  }
+}

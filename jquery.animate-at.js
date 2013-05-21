@@ -16,18 +16,18 @@
 (function ( $ ) {
  
     $.animateAt = function() {
+      $("[data-animate-from-hidden]").hide();
+
       var toAnimate;
 
       // find elements to animate
       toAnimate = $("[data-animate-at]");
 
-      toAnimate.find("[data-animate-from-hidden").hide();
-
       toAnimate.each(function() {
-        var animateAt;
+        var animateAt, el;
         el = $(this);
         animateAt = parseInt(el.attr("data-animate-at"));
-        setTimeout((function() {
+        return setTimeout((function() {
           return el.addClass("animated").show();
         }), animateAt);
       });
