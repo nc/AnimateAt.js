@@ -1,0 +1,8 @@
+{
+  "name": "AnimateAt.js",
+  "version": "0.1.0",
+  "main": "./jquery.animateat.js",
+  "dependencies": {
+    "jquery": ">= 1.6"
+  }
+}
