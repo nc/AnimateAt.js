@@ -32,6 +32,19 @@ h1, h2 {
   @include span-columns(6);
 }
 
+a {
+  color: #222;
+  text-decoration: none;
+  
+  &:visited {
+    color: white;
+  }
+
+  &:hover {
+    color: white;
+  } 
+}
+
 .shuffle {
   @include span-columns(12);
   text-align: right;

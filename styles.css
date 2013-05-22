@@ -11,6 +11,15 @@
   box-sizing: border-box;
 }
 
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #222;
+}
+
 body {
   color: #222;
   text-align: left;
@@ -109,4 +118,8 @@ ul li:hover {
   background: #222;
   color: #fff;
   cursor: pointer;
+}
+
+ul li:hover a {
+  color: white;
 }
