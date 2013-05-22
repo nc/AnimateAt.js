@@ -18,18 +18,22 @@
       var animations = [
         "fadeInDown",
         "bounceInUp",
+        "flipInX",
         "flipInY",
         "pulse",
         "fadeIn",
         "bounceIn",
         "fadeInUp",
-        "bounceInDown"
+        "bounceInDown",
+        "fadeInLeft",
+        "bounceInLeft"
       ];
 
       $("a.shuffle").click(function(e) {
         e.preventDefault();
 
         var animation = animations[ Math.round(Math.random() * animations.length) ];
+        console.log(animation)
         $("[data-animate-at]").removeClass().addClass(animation);
         
         $.animateAt();
@@ -39,14 +43,6 @@
     })
   </script>
 
-  <style type="text/css">
-  .animated {
-    -webkit-animation-duration: 0.5s;
-       -moz-animation-duration: 0.5s;
-         -o-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-  }
-  </style>
 </head>
 <body>
 

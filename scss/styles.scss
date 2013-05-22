@@ -5,6 +5,13 @@ $max-width: 100%;
 
 $tablet: new-breakpoint(max-width 900px);
 
+.animated {
+  -webkit-animation-duration: 0.5s;
+     -moz-animation-duration: 0.5s;
+       -o-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
 body {
   color: #222;
   text-align: left;
@@ -12,6 +19,7 @@ body {
   @include outer-container;
   @include pad;
   font-size: 2rem;
+  overflow: hidden;
 }
 
 html {
