@@ -1,0 +1,71 @@
+<html>
+<head>
+  <title>AnimateAt.js</title>
+  <link rel="stylesheet" type="text/css" href="https://raw.github.com/daneden/animate.css/master/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="http://animate-at.js.s3.amazonaws.com/ss-social/webfonts/ss-social.css">
+  <link rel="stylesheet" type="text/css" href="http://animate-at.js.s3.amazonaws.com/ss-standard/webfonts/ss-standard-optimized.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
+  <script type="text/javascript" src="jquery.animate-at.js"></script>
+
+  <script type="text/javascript">
+
+
+    $(function() {
+    
+      // example shuffle code
+      var animations = [
+        "fadeInDown",
+        "bounceInUp",
+        "flipInX",
+        "flipInY",
+        "pulse",
+        "fadeIn",
+        "bounceIn",
+        "fadeInUp",
+        "bounceInDown",
+        "fadeInLeft",
+        "bounceInLeft"
+      ];
+
+      $("a.shuffle").click(function(e) {
+        e.preventDefault();
+
+        var animation = animations[ Math.round(Math.random() * animations.length) ];
+        console.log(animation)
+        $("[data-animate-at]").removeClass().addClass(animation);
+        
+        $.animateAt();
+      });
+
+      $.animateAt();      
+    })
+  </script>
+
+</head>
+<body>
+
+  <a href="#" class="ss-icon ss-standard shuffle">Shuffle</a>
+
+  <h1 class="bounceInDown" data-animate-at="0" data-animate-from-hidden>AnimateAt.js</h1>
+  <h2 class="bounceInDown" data-animate-at="200" data-animate-from-hidden>A minimal animation timing API for use with Animate.css</h2>
+
+  <ul>
+    <li class="bounceInDown" data-animate-at="400" data-animate-from-hidden>
+      <span class="ss-icon ss-social">twitter</span>
+      spread the word
+    </li>
+    <li class="bounceInDown" data-animate-at="600" data-animate-from-hidden>
+      <span class="ss-icon ss-standard">downloadcloud</span>
+      get the code
+    </li>
+    <li class="bounceInDown" data-animate-at="800" data-animate-from-hidden>
+      <span class="ss-icon ss-social">github</span>
+      fork it
+    </li>
+  </ul>
+
+  <script type="text/javascript" data-project="AnimateAt.js" src="http://localhost:48626/javascripts/edge.js"></script>
+</body>
+</html>
